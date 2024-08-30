@@ -1,0 +1,9 @@
+server:
+  port: 9080
+
+topics:
+  payment:
+    request:
+      topic: "payment.request.topic.v1"
+
+spring.application.name: consumer
