@@ -1,5 +1,31 @@
-# Kafka Consumer
-Project created to test Kafka Integration
+# Apache Kafka
+
+ 
+
+https://kafka.apache.org/
+
+Apache Kafka é um OS (Open Source), para stream de dados/mensageria.
+
+* A idéia é sempre que um evento chegar no Kafka (gerado por um **Producer**), ele possa ser transmitido para outros sistemas (chamados **consumidores**);
+* Tem alta performance (trilhões de dados todos os dias);
+* Alta disponibildiade;
+* Pode integrar diversos aplicativos
+
+![overview](./imageResource/overview.png)
+
+## How it works
+
+* **Producer**: produz a mensagem para um **Broker**;
+* **Broker**: são os mini clusters/servidores que ficam em um **Cluster Kafka**, que possui **Topics/Partitions**
+* **Topic**: pode ter 1 ou mais partições - a mensagem cai em um tópico e é armazenada em uma partição
+* **Partitions**: é onde fica a mensagem disponível para o consumidor
+* **Consumer**: é quem consome a mensagem que estava na partition;
+
+![brokers](./imageResource/brokers.png)
+
+![partition](/Users/igorgomesromerovilela/Development/NotesInGeneral/kafka/imageResource/partition.png)
+
+
 
 ## How to Execute Kafka Locally
 
