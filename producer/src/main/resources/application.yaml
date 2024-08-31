@@ -1,0 +1,22 @@
+server:
+  port: 9090
+
+topics:
+  payment:
+    request:
+      topic: "payment"
+
+spring:
+  application.name: producer
+  kafka:
+    bootstrap-servers: https://yourCloudHost:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username="yourCloudUser" password="yourPassword";
